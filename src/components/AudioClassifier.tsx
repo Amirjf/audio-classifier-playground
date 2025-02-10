@@ -69,7 +69,7 @@ const AudioClassifier = () => {
 
   const fetchModels = async () => {
     try {
-      const response = await fetch('http://localhost:8000/models');
+      const response = await fetch('https://aed.zal.digital/models');
       if (!response.ok) throw new Error('Failed to fetch models');
       const models = await response.json();
       setAvailableModels(models);
@@ -100,7 +100,7 @@ const AudioClassifier = () => {
     setError(null);
 
     try {
-      const response = await fetch('http://localhost:8000/train', {
+      const response = await fetch('https://aed.zal.digital/train', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -132,7 +132,7 @@ const AudioClassifier = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:8000/predict?model_name=${selectedModel}`,
+        `https://aed.zal.digital/predict?model_name=${selectedModel}`,
         {
           method: 'POST',
           body: formData,
