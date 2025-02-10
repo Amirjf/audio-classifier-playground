@@ -160,6 +160,15 @@ const AudioClassifier = () => {
           </CardTitle>
         </CardHeader>
         <CardContent>
+          <div className="space-y-2">
+            <Label>Model Name</Label>
+            <Input
+              value={config.model_name}
+              onChange={(e) =>
+                setConfig({ ...config, model_name: e.target.value })
+              }
+            />
+          </div>
           <Accordion type="single" collapsible>
             <AccordionItem value="features">
               <AccordionTrigger>Feature Selection</AccordionTrigger>
@@ -192,16 +201,6 @@ const AudioClassifier = () => {
               <AccordionTrigger>Model Parameters</AccordionTrigger>
               <AccordionContent>
                 <div className="space-y-4">
-                  <div className="space-y-2">
-                    <Label>Model Name</Label>
-                    <Input
-                      value={config.model_name}
-                      onChange={(e) =>
-                        setConfig({ ...config, model_name: e.target.value })
-                      }
-                    />
-                  </div>
-
                   <div className="space-y-2">
                     <div className="flex items-center space-x-2">
                       <Switch
@@ -286,6 +285,12 @@ const AudioClassifier = () => {
           </div>
         </CardContent>
       </Card>
+
+      <div className="flex items-center justify-center my-4">
+        <div className="border-t border-gray-300 flex-grow"></div>
+        <span className="mx-4 text-gray-500">or</span>
+        <div className="border-t border-gray-300 flex-grow"></div>
+      </div>
 
       <Card>
         <CardHeader>
