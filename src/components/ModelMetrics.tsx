@@ -7,7 +7,6 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CATEGORY_MAPPER } from './AudioClassifier';
 
 const ModelMetrics = ({ metrics }: any) => {
