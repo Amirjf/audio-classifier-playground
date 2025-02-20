@@ -1,9 +1,11 @@
+import Page from './app/dashboard/page';
 import AudioClassifier from './components/AudioClassifier';
 
 function App() {
   return (
     <>
-      <AudioClassifier />
+      {/* <AudioClassifier /> */}
+      <Page />
     </>
   );
 }
